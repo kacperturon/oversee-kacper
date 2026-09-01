@@ -1,0 +1,33 @@
+[project]
+name = "rebooking-copilot"
+version = "0.1.0"
+description = "Deterministic rebooking recommendations for ticketed PNRs against a fare snapshot."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7",
+    "litellm>=1.40",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.5",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rebooking_copilot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

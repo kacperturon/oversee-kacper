@@ -1,0 +1,14 @@
+{
+  "_comment": "Client business policy. Versioned so any recommendation can be replayed against the rules that produced it. See DESIGN.md section 1.",
+  "version": "mvp-2026-09-02.4",
+  "minSavingAbsolute": "25.00",
+  "minSavingPercentOfTotalPaid": "0.05",
+  "cabinDowngradeMinSavingPercent": "0.10",
+  "scheduleToleranceHours": "2",
+  "nearThresholdPercentagePoints": "0.01",
+  "approvedCarriers": ["AA", "AS", "AV", "BA", "DL", "UA"],
+  "fxRates": {
+    "EUR/USD": "1.08"
+  },
+  "fxRateSource": "fixed-mvp-configuration"
+}

@@ -1,0 +1,130 @@
+{
+  "_comment": "Existing ticketed bookings. Prices are PER PASSENGER unless you decide otherwise (see totalPaid). Fare-rule attributes (refundable, changeFee, baggageIncludedPieces) are inline. Currency is NOT always USD.",
+  "pnrs": [
+    {
+      "pnr": "QX7T2A",
+      "passengers": 1,
+      "itinerary": [
+        {
+          "origin": "JFK",
+          "destination": "LAX",
+          "departure": "2026-08-15T08:00:00",
+          "arrival": "2026-08-15T11:20:00",
+          "carrier": "AA",
+          "flightNumber": "AA118",
+          "stops": 0,
+          "cabin": "ECONOMY",
+          "fareBasis": "QAA7ZNR"
+        }
+      ],
+      "ticket": {
+        "pricePerPassenger": { "amount": 480.00, "currency": "USD" },
+        "totalPaid": { "amount": 480.00, "currency": "USD" },
+        "cabin": "ECONOMY",
+        "refundable": false,
+        "changeFeePerPassenger": { "amount": 100.00, "currency": "USD" },
+        "baggageIncludedPieces": 1
+      }
+    },
+    {
+      "pnr": "LM9P4C",
+      "passengers": 2,
+      "itinerary": [
+        {
+          "origin": "SFO",
+          "destination": "ORD",
+          "departure": "2026-09-02T13:30:00",
+          "arrival": "2026-09-02T19:45:00",
+          "carrier": "UA",
+          "flightNumber": "UA642",
+          "stops": 0,
+          "cabin": "ECONOMY",
+          "fareBasis": "KUA14"
+        }
+      ],
+      "ticket": {
+        "pricePerPassenger": { "amount": 350.00, "currency": "USD" },
+        "totalPaid": { "amount": 700.00, "currency": "USD" },
+        "cabin": "ECONOMY",
+        "refundable": false,
+        "changeFeePerPassenger": { "amount": 75.00, "currency": "USD" },
+        "baggageIncludedPieces": 1
+      }
+    },
+    {
+      "pnr": "RT5K8B",
+      "passengers": 1,
+      "itinerary": [
+        {
+          "origin": "LHR",
+          "destination": "JFK",
+          "departure": "2026-08-20T10:15:00",
+          "arrival": "2026-08-20T13:10:00",
+          "carrier": "BA",
+          "flightNumber": "BA175",
+          "stops": 0,
+          "cabin": "BUSINESS",
+          "fareBasis": "JBAFLEX"
+        }
+      ],
+      "ticket": {
+        "pricePerPassenger": { "amount": 2200.00, "currency": "EUR" },
+        "totalPaid": { "amount": 2200.00, "currency": "EUR" },
+        "cabin": "BUSINESS",
+        "refundable": true,
+        "changeFeePerPassenger": { "amount": 0.00, "currency": "EUR" },
+        "baggageIncludedPieces": 2
+      }
+    },
+    {
+      "pnr": "ZC3N1D",
+      "passengers": 1,
+      "itinerary": [
+        {
+          "origin": "MIA",
+          "destination": "BOG",
+          "departure": "2026-10-10T22:05:00",
+          "arrival": "2026-10-11T01:40:00",
+          "carrier": "AV",
+          "flightNumber": "AV24",
+          "stops": 0,
+          "cabin": "ECONOMY",
+          "fareBasis": "YAVREF"
+        }
+      ],
+      "ticket": {
+        "pricePerPassenger": { "amount": 640.00, "currency": "USD" },
+        "totalPaid": { "amount": 640.00, "currency": "USD" },
+        "cabin": "ECONOMY",
+        "refundable": true,
+        "changeFeePerPassenger": { "amount": 0.00, "currency": "USD" },
+        "baggageIncludedPieces": 1
+      }
+    },
+    {
+      "pnr": "HB6W9E",
+      "passengers": 1,
+      "itinerary": [
+        {
+          "origin": "SEA",
+          "destination": "DEN",
+          "departure": "2026-08-30T06:45:00",
+          "arrival": "2026-08-30T10:05:00",
+          "carrier": "AS",
+          "flightNumber": "AS612",
+          "stops": 0,
+          "cabin": "ECONOMY",
+          "fareBasis": "GAS21NR"
+        }
+      ],
+      "ticket": {
+        "pricePerPassenger": { "amount": 260.00, "currency": "USD" },
+        "totalPaid": { "amount": 260.00, "currency": "USD" },
+        "cabin": "ECONOMY",
+        "refundable": false,
+        "changeFeePerPassenger": { "amount": 150.00, "currency": "USD" },
+        "baggageIncludedPieces": 1
+      }
+    }
+  ]
+}

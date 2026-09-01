@@ -1,0 +1,406 @@
+{
+  "evaluationMode": "HISTORICAL_SNAPSHOT",
+  "generatedAt": "2026-09-02T17:13:52.520926Z",
+  "evaluatedAsOf": "2026-07-08T09:00:00Z",
+  "fareSnapshotCapturedAt": "2026-07-08T09:00:00Z",
+  "policyVersion": "mvp-2026-09-02.4",
+  "fxRateSource": "fixed-mvp-configuration",
+  "pnrsEvaluated": 5,
+  "quarantinedOffers": 0,
+  "decisionCounts": {
+    "REBOOK": 1,
+    "DONT_REBOOK": 2,
+    "REVIEW": 2
+  },
+  "recommendations": [
+    {
+      "pnr": "QX7T2A",
+      "decision": "REBOOK",
+      "selectedOfferId": "OF-1001",
+      "estimatedNetSaving": {
+        "amount": "80.00",
+        "currency": "USD"
+      },
+      "confidence": "HIGH",
+      "confidenceReasons": [
+        "COMPLETE_SAME_CURRENCY_DATA"
+      ],
+      "reasonCodes": [
+        "EQUIVALENT_PRODUCT_SAVING"
+      ],
+      "warningCodes": [],
+      "candidateWarnings": [],
+      "explanation": {
+        "explanation": "Recommend rebooking to OF-1001: estimated net saving 80.00 USD after the exchange fee of 100.00 USD for 1 passenger(s), because the fare is equivalent on cabin, baggage, stops, and schedule.",
+        "travelerImpact": "The traveller keeps an equivalent journey at a lower total cost.",
+        "reviewQuestion": null,
+        "source": "TEMPLATE",
+        "promptVersion": "explanation-v2",
+        "provider": null
+      },
+      "bestComparableOfferId": "OF-1001",
+      "monitoring": null,
+      "candidates": [
+        {
+          "offerId": "OF-1001",
+          "status": "ELIGIBLE",
+          "reasonCodes": [
+            "EQUIVALENT_PRODUCT_SAVING"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "300.00",
+            "currentExchangeFeeTotal": "100.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "100.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "100.00",
+            "estimatedNetSaving": "80.00",
+            "netSavingPercentOfTotalPaid": "0.1667",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": true
+        }
+      ],
+      "alternatives": [],
+      "evaluatedAsOf": "2026-07-08T09:00:00Z",
+      "generatedAt": "2026-09-02T17:13:52.520926Z",
+      "fxRateSource": "fixed-mvp-configuration",
+      "policyVersion": "mvp-2026-09-02.4",
+      "validationError": null
+    },
+    {
+      "pnr": "LM9P4C",
+      "decision": "DONT_REBOOK",
+      "selectedOfferId": null,
+      "estimatedNetSaving": {
+        "amount": "-90.00",
+        "currency": "USD"
+      },
+      "confidence": "HIGH",
+      "confidenceReasons": [
+        "COMPLETE_SAME_CURRENCY_DATA",
+        "NO_ACCEPTABLE_OFFER"
+      ],
+      "reasonCodes": [
+        "BAGGAGE_REDUCED",
+        "CABIN_DOWNGRADE",
+        "SAVING_BELOW_THRESHOLD"
+      ],
+      "warningCodes": [],
+      "candidateWarnings": [],
+      "explanation": {
+        "explanation": "Do not rebook: the best available fare would leave -90.00 USD, because included baggage would be reduced; it downgrades the cabin without a large enough saving; the saving does not clear the client's minimum.",
+        "travelerImpact": "The booking is unchanged.",
+        "reviewQuestion": null,
+        "source": "TEMPLATE",
+        "promptVersion": "explanation-v2",
+        "provider": null
+      },
+      "bestComparableOfferId": null,
+      "monitoring": {
+        "recheckPriority": "NORMAL",
+        "triggerPricePerPassenger": null,
+        "currency": null
+      },
+      "candidates": [
+        {
+          "offerId": "OF-2001",
+          "status": "REJECTED",
+          "reasonCodes": [
+            "BAGGAGE_REDUCED",
+            "CABIN_DOWNGRADE",
+            "SAVING_BELOW_THRESHOLD"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "640.00",
+            "currentExchangeFeeTotal": "150.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "75.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "75.00",
+            "estimatedNetSaving": "-90.00",
+            "netSavingPercentOfTotalPaid": "-0.1286",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": false
+        }
+      ],
+      "alternatives": [],
+      "evaluatedAsOf": "2026-07-08T09:00:00Z",
+      "generatedAt": "2026-09-02T17:13:52.520926Z",
+      "fxRateSource": "fixed-mvp-configuration",
+      "policyVersion": "mvp-2026-09-02.4",
+      "validationError": null
+    },
+    {
+      "pnr": "RT5K8B",
+      "decision": "REVIEW",
+      "selectedOfferId": "OF-3001",
+      "estimatedNetSaving": {
+        "amount": "255.56",
+        "currency": "EUR"
+      },
+      "confidence": "LOW",
+      "confidenceReasons": [
+        "ILLUSTRATIVE_FX_RATE"
+      ],
+      "reasonCodes": [
+        "CROSS_CURRENCY_ESTIMATE"
+      ],
+      "warningCodes": [],
+      "candidateWarnings": [],
+      "explanation": {
+        "explanation": "Hold for human review: OF-3001 shows an estimated net saving of 255.56 EUR, but the comparison relies on an illustrative exchange rate.",
+        "travelerImpact": "A reviewer must accept the trade-off before anything changes.",
+        "reviewQuestion": "Confirm the live exchange rate and settlement currency before acting.",
+        "source": "TEMPLATE",
+        "promptVersion": "explanation-v2",
+        "provider": null
+      },
+      "bestComparableOfferId": "OF-3001",
+      "monitoring": null,
+      "candidates": [
+        {
+          "offerId": "OF-3001",
+          "status": "REVIEW",
+          "reasonCodes": [
+            "CROSS_CURRENCY_ESTIMATE"
+          ],
+          "economics": {
+            "currency": "EUR",
+            "newFareTotal": "1944.44",
+            "currentExchangeFeeTotal": "0.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "0.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "0.00",
+            "estimatedNetSaving": "255.56",
+            "netSavingPercentOfTotalPaid": "0.1162",
+            "fareConversion": {
+              "original": {
+                "amount": "2100.00",
+                "currency": "USD"
+              },
+              "converted": {
+                "amount": "1944.44",
+                "currency": "EUR"
+              },
+              "quotePair": "EUR/USD",
+              "quotedRate": "1.08",
+              "appliedPair": "USD/EUR",
+              "appliedRate": "0.9259259259259259259259259259",
+              "source": "fixed-mvp-configuration"
+            },
+            "futureChangeFeeConversion": {
+              "original": {
+                "amount": "0.00",
+                "currency": "USD"
+              },
+              "converted": {
+                "amount": "0.00",
+                "currency": "EUR"
+              },
+              "quotePair": "EUR/USD",
+              "quotedRate": "1.08",
+              "appliedPair": "USD/EUR",
+              "appliedRate": "0.9259259259259259259259259259",
+              "source": "fixed-mvp-configuration"
+            }
+          },
+          "isComparable": true
+        }
+      ],
+      "alternatives": [],
+      "evaluatedAsOf": "2026-07-08T09:00:00Z",
+      "generatedAt": "2026-09-02T17:13:52.520926Z",
+      "fxRateSource": "fixed-mvp-configuration",
+      "policyVersion": "mvp-2026-09-02.4",
+      "validationError": null
+    },
+    {
+      "pnr": "ZC3N1D",
+      "decision": "REVIEW",
+      "selectedOfferId": "OF-4001",
+      "estimatedNetSaving": {
+        "amount": "140.00",
+        "currency": "USD"
+      },
+      "confidence": "MEDIUM",
+      "confidenceReasons": [
+        "CLIENT_DECISION_REQUIRED"
+      ],
+      "reasonCodes": [
+        "REFUNDABILITY_LOST"
+      ],
+      "warningCodes": [],
+      "candidateWarnings": [],
+      "explanation": {
+        "explanation": "Hold for human review: OF-4001 shows an estimated net saving of 140.00 USD, but the ticket would stop being refundable.",
+        "travelerImpact": "A reviewer must accept the trade-off before anything changes.",
+        "reviewQuestion": "Confirm the client accepts losing refundability in exchange for this saving.",
+        "source": "TEMPLATE",
+        "promptVersion": "explanation-v2",
+        "provider": null
+      },
+      "bestComparableOfferId": "OF-4001",
+      "monitoring": null,
+      "candidates": [
+        {
+          "offerId": "OF-4001",
+          "status": "REVIEW",
+          "reasonCodes": [
+            "REFUNDABILITY_LOST"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "500.00",
+            "currentExchangeFeeTotal": "0.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "0.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "0.00",
+            "estimatedNetSaving": "140.00",
+            "netSavingPercentOfTotalPaid": "0.2188",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": true
+        }
+      ],
+      "alternatives": [],
+      "evaluatedAsOf": "2026-07-08T09:00:00Z",
+      "generatedAt": "2026-09-02T17:13:52.520926Z",
+      "fxRateSource": "fixed-mvp-configuration",
+      "policyVersion": "mvp-2026-09-02.4",
+      "validationError": null
+    },
+    {
+      "pnr": "HB6W9E",
+      "decision": "DONT_REBOOK",
+      "selectedOfferId": null,
+      "estimatedNetSaving": {
+        "amount": "-90.00",
+        "currency": "USD"
+      },
+      "confidence": "HIGH",
+      "confidenceReasons": [
+        "COMPLETE_SAME_CURRENCY_DATA",
+        "NO_ACCEPTABLE_OFFER"
+      ],
+      "reasonCodes": [
+        "SAVING_BELOW_THRESHOLD"
+      ],
+      "warningCodes": [],
+      "candidateWarnings": [],
+      "explanation": {
+        "explanation": "Do not rebook: OF-5001 would leave -90.00 USD, because the saving does not clear the client's minimum. Recheck when the fare reaches 85.00 USD per passenger.",
+        "travelerImpact": "The booking is unchanged.",
+        "reviewQuestion": null,
+        "source": "TEMPLATE",
+        "promptVersion": "explanation-v2",
+        "provider": null
+      },
+      "bestComparableOfferId": "OF-5001",
+      "monitoring": {
+        "recheckPriority": "NORMAL",
+        "triggerPricePerPassenger": "85.00",
+        "currency": "USD"
+      },
+      "candidates": [
+        {
+          "offerId": "OF-5001",
+          "status": "REJECTED",
+          "reasonCodes": [
+            "SAVING_BELOW_THRESHOLD"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "200.00",
+            "currentExchangeFeeTotal": "150.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "150.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "150.00",
+            "estimatedNetSaving": "-90.00",
+            "netSavingPercentOfTotalPaid": "-0.3462",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": true
+        },
+        {
+          "offerId": "OF-5002",
+          "status": "REJECTED",
+          "reasonCodes": [
+            "DEPARTURE_OUTSIDE_WINDOW",
+            "ARRIVAL_OUTSIDE_WINDOW",
+            "ADDS_STOP",
+            "BAGGAGE_REDUCED",
+            "CABIN_DOWNGRADE",
+            "SAVING_BELOW_THRESHOLD",
+            "CARRIER_NOT_APPROVED"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "150.00",
+            "currentExchangeFeeTotal": "150.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "0.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "0.00",
+            "estimatedNetSaving": "-40.00",
+            "netSavingPercentOfTotalPaid": "-0.1538",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": false
+        }
+      ],
+      "alternatives": [
+        {
+          "offerId": "OF-5002",
+          "status": "REJECTED",
+          "reasonCodes": [
+            "DEPARTURE_OUTSIDE_WINDOW",
+            "ARRIVAL_OUTSIDE_WINDOW",
+            "ADDS_STOP",
+            "BAGGAGE_REDUCED",
+            "CABIN_DOWNGRADE",
+            "SAVING_BELOW_THRESHOLD",
+            "CARRIER_NOT_APPROVED"
+          ],
+          "economics": {
+            "currency": "USD",
+            "newFareTotal": "150.00",
+            "currentExchangeFeeTotal": "150.00",
+            "futureChangeFeePerPassenger": {
+              "amount": "0.00",
+              "currency": "USD"
+            },
+            "futureChangeFeeInBookingCurrency": "0.00",
+            "estimatedNetSaving": "-40.00",
+            "netSavingPercentOfTotalPaid": "-0.1538",
+            "fareConversion": null,
+            "futureChangeFeeConversion": null
+          },
+          "isComparable": false
+        }
+      ],
+      "evaluatedAsOf": "2026-07-08T09:00:00Z",
+      "generatedAt": "2026-09-02T17:13:52.520926Z",
+      "fxRateSource": "fixed-mvp-configuration",
+      "policyVersion": "mvp-2026-09-02.4",
+      "validationError": null
+    }
+  ]
+}
